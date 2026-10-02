@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Auto Executive - Sistema de gestão para estética automotiva."
+    >
+
+    <title>
+        Auto Executive | Acesso
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    AE
+                </div>
+
+                <div class="brand-name">
+                    AUTO EXECUTIVE
+                </div>
+
+                <div class="brand-subtitle">
+                    GESTÃO
+                </div>
+
+            </div>
+
+
+            <div class="login-header">
+
+                <h1>
+                    Acesso ao sistema
+                </h1>
+
+                <p>
+                    Entre com sua matrícula e senha.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="field">
+
+                    <label for="matricula">
+                        Matrícula
+                    </label>
+
+                    <input
+                        id="matricula"
+                        name="matricula"
+                        type="text"
+                        inputmode="numeric"
+                        autocomplete="username"
+                        placeholder="000001"
+                        maxlength="20"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        id="senha"
+                        name="senha"
+                        type="password"
+                        autocomplete="current-password"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    id="loginButton"
+                    type="submit"
+                    class="btn-primary"
+                >
+                    Entrar
+                </button>
+
+
+                <div
+                    id="loginMessage"
+                    class="login-message"
+                ></div>
+
+            </form>
+
+
+            <div class="login-footer">
+
+                AUTO EXECUTIVE • Gestão
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SUPABASE
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+
+    <!-- =====================================================
+         CONFIGURAÇÃO
+    ====================================================== -->
+
+    <script src="./js/config.js"></script>
+
+
+    <!-- =====================================================
+         AUTENTICAÇÃO
+    ====================================================== -->
+
+    <script src="./js/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Auto Executive | Financeiro</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                AE
+            </div>
+
+            <div class="brand-text">
+
+                <strong>AUTO</strong>
+
+                <span>EXECUTIVE</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <p class="nav-title">
+                PRINCIPAL
+            </p>
+
+
+            <a
+                href="./dashboard.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <p class="nav-title">
+                OPERAÇÃO
+            </p>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    🚗
+                </span>
+
+                <span>
+                    Veículos
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ✦
+                </span>
+
+                <span>
+                    Serviços
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                <span>
+                    Estoque
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Máquinas
+                </span>
+
+            </a>
+
+
+            <p class="nav-title">
+                GESTÃO
+            </p>
+
+
+            <a
+                href="./financeiro.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    R$
+                </span>
+
+                <span>
+                    Financeiro
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Funcionários
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ↗
+                </span>
+
+                <span>
+                    Investimentos
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="user-mini">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Administrador
+                    </strong>
+
+                    <span>
+                        Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+                type="button"
+            >
+                Sair
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    GESTÃO FINANCEIRA
+                </p>
+
+                <h1>
+                    Financeiro
+                </h1>
+
+                <p class="topbar-description">
+                    Controle de receitas, despesas e investimentos.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <div class="date-box">
+
+                    <span>
+                        Hoje
+                    </span>
+
+                    <strong id="currentDate">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="profile-button"
+                    type="button"
+                >
+
+                    <span class="profile-avatar">
+                        A
+                    </span>
+
+                    Administrador
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <section class="dashboard">
+
+
+            <!-- =================================================
+                 CABEÇALHO DA PÁGINA
+            ================================================== -->
+
+            <div class="dashboard-toolbar">
+
+
+                <div>
+
+                    <span class="toolbar-label">
+                        CONTROLE FINANCEIRO
+                    </span>
+
+                    <strong>
+                        Movimentações da empresa
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="newTransactionButton"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    + Novo lançamento
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CARDS
+            ================================================== -->
+
+            <div class="metrics-grid">
+
+
+                <article class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span class="metric-label">
+                            RECEITAS
+                        </span>
+
+                        <span class="metric-icon green">
+                            ↑
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="metric-value positive"
+                        id="totalIncome"
+                    >
+                        R$ 0,00
+                    </strong>
+
+                    <span class="metric-description">
+                        Total de ganhos no período
+                    </span>
+
+                </article>
+
+
+
+                <article class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span class="metric-label">
+                            DESPESAS
+                        </span>
+
+                        <span class="metric-icon gray">
+                            ↓
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="metric-value"
+                        id="totalExpense"
+                    >
+                        R$ 0,00
+                    </strong>
+
+                    <span class="metric-description">
+                        Total de gastos no período
+                    </span>
+
+                </article>
+
+
+
+                <article class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span class="metric-label">
+                            INVESTIMENTOS
+                        </span>
+
+                        <span class="metric-icon orange">
+                            ↗
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="metric-value"
+                        id="totalInvestment"
+                    >
+                        R$ 0,00
+                    </strong>
+
+                    <span class="metric-description">
+                        Investimentos realizados
+                    </span>
+
+                </article>
+
+
+
+                <article class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span class="metric-label">
+                            summaryBalance
+                        </span>
+
+                        <span class="metric-icon dark">
+                            R$
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="metric-value positive"
+                        id="totalBalance"
+                    >
+                        R$ 0,00
+                    </strong>
+
+                    <span class="metric-description">
+                        Receitas menos despesas
+                    </span>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
+
+            <article class="panel finance-filter-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            FILTROS
+                        </span>
+
+                        <h2>
+                            Período e categoria
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="finance-filters">
+
+
+                    <div class="field">
+
+                        <label for="startDate">
+                            Data inicial
+                        </label>
+
+                        <input
+                            id="startDate"
+                            type="date"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="endDate">
+                            Data final
+                        </label>
+
+                        <input
+                            id="endDate"
+                            type="date"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="typeFilter">
+                            Tipo
+                        </label>
+
+                        <select id="typeFilter">
+
+                            <option value="todos">
+                                Todos
+                            </option>
+
+                            <option value="ganho">
+                                Ganhos
+                            </option>
+
+                            <option value="gasto">
+                                Gastos
+                            </option>
+
+                            <option value="investimento">
+                                Investimentos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        id="filterButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Filtrar
+                    </button>
+
+
+                    <button
+                        id="clearFilterButton"
+                        class="text-button"
+                        type="button"
+                    >
+                        Limpar
+                    </button>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 LANÇAMENTOS
+            ================================================== -->
+
+            <article class="panel transactions-panel">
+
+
+                <div class="panel-header">
+
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            MOVIMENTAÇÕES
+                        </span>
+
+                        <h2>
+                            Lançamentos financeiros
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        id="transactionCount"
+                        class="transaction-count"
+                    >
+                        0 lançamentos
+                    </span>
+
+
+                </div>
+
+
+                <div
+                    id="transactionMessage"
+                    class="transaction-message"
+                >
+                    Carregando lançamentos...
+                </div>
+
+
+                <div class="table-wrapper">
+
+
+                    <table class="transactions-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Data
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+
+                                <th>
+                                    Categoria
+                                </th>
+
+                                <th>
+                                    Tipo
+                                </th>
+
+                                <th>
+                                    Valor
+                                </th>
+
+                                <th>
+                                    Ação
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="transactionsBody">
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+
+
+        <footer class="footer">
+
+            <span>
+                Auto Executive
+            </span>
+
+            <span>
+                Sistema de Gestão • Financeiro
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     MODAL
+========================================================== -->
+
+<div
+    id="transactionModal"
+    class="modal-overlay hidden"
+>
+
+
+    <div class="modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="panel-kicker">
+                    NOVO REGISTRO
+                </span>
+
+                <h2>
+                    Novo lançamento
+                </h2>
+
+            </div>
+
+
+            <button
+                id="closeModalButton"
+                class="modal-close"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <form id="transactionForm">
+
+
+            <div class="modal-grid">
+
+
+                <div class="field">
+
+                    <label for="transactionType">
+                        Tipo
+                    </label>
+
+                    <select
+                        id="transactionType"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="ganho">
+                            Ganho
+                        </option>
+
+                        <option value="gasto">
+                            Gasto
+                        </option>
+
+                        <option value="investimento">
+                            Investimento
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="transactionDate">
+                        Data
+                    </label>
+
+                    <input
+                        id="transactionDate"
+                        type="date"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label for="transactionDescription">
+                        Descrição
+                    </label>
+
+                    <input
+                        id="transactionDescription"
+                        type="text"
+                        placeholder="Ex.: Lavagem completa"
+                        maxlength="150"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="transactionCategory">
+                        Categoria
+                    </label>
+
+                    <select
+                        id="transactionCategory"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="servicos">
+                            Serviços
+                        </option>
+
+                        <option value="produtos">
+                            Produtos
+                        </option>
+
+                        <option value="materiais">
+                            Materiais
+                        </option>
+
+                        <option value="energia">
+                            Energia
+                        </option>
+
+                        <option value="aluguel">
+                            Aluguel
+                        </option>
+
+                        <option value="salarios">
+                            Salários
+                        </option>
+
+                        <option value="equipamentos">
+                            Equipamentos
+                        </option>
+
+                        <option value="marketing">
+                            Marketing
+                        </option>
+
+                        <option value="outros">
+                            Outros
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="transactionValue">
+                        Valor
+                    </label>
+
+                    <input
+                        id="transactionValue"
+                        type="number"
+                        min="0.01"
+                        step="0.01"
+                        placeholder="0,00"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label for="transactionNote">
+                        Observação
+                    </label>
+
+                    <textarea
+                        id="transactionNote"
+                        rows="3"
+                        maxlength="500"
+                        placeholder="Informações adicionais..."
+                    ></textarea>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                id="formError"
+                class="form-error"
+            ></div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancelModalButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    class="primary-button"
+                    type="submit"
+                >
+                    Salvar lançamento
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+<script src="./js/config.js"></script>
+
+<script src="./js/financeiro.js"></script>
+
+
+</body>
+
+</html>

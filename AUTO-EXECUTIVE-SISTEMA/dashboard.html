@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Auto Executive - Gestão inteligente para estética automotiva"
+    >
+
+    <title>Auto Executive | Dashboard</title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APLICAÇÃO
+    ====================================================== -->
+
+    <div class="app">
+
+
+        <!-- =================================================
+             MENU LATERAL
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    AE
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        AUTO
+                    </strong>
+
+                    <span>
+                        EXECUTIVE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="nav-title">
+                    PRINCIPAL
+                </p>
+
+
+                <a
+                    href="#dashboard"
+                    class="nav-item active"
+                >
+
+                    <span class="nav-icon">
+                        ▦
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <p class="nav-title">
+                    OPERAÇÃO
+                </p>
+
+
+                <a
+                    href="#veiculos"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        🚗
+                    </span>
+
+                    <span>
+                        Veículos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#servicos"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        ✦
+                    </span>
+
+                    <span>
+                        Serviços
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#estoque"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        ▣
+                    </span>
+
+                    <span>
+                        Estoque
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#maquinas"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Máquinas
+                    </span>
+
+                </a>
+
+
+                <p class="nav-title">
+                    GESTÃO
+                </p>
+
+
+                <a
+                    href="#financeiro"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        R$
+                    </span>
+
+                    <span>
+                        Financeiro
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#funcionarios"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        ◉
+                    </span>
+
+                    <span>
+                        Funcionários
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#investimentos"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        ↗
+                    </span>
+
+                    <span>
+                        Investimentos
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- USUÁRIO -->
+
+            <div class="sidebar-footer">
+
+                <div class="user-mini">
+
+                    <div class="user-avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong id="sidebarUserName">
+                            Administrador
+                        </strong>
+
+                        <span id="sidebarUserRole">
+                            Administrador
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="logoutButton"
+                    class="logout-button"
+                    type="button"
+                >
+
+                    Sair
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CONTEÚDO PRINCIPAL
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        VISÃO EXECUTIVA
+                    </p>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p class="topbar-description">
+                        Controle operacional e financeiro da empresa.
+                    </p>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+
+                    <div class="date-box">
+
+                        <span>
+                            Hoje
+                        </span>
+
+                        <strong id="currentDate">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="profile-button"
+                        type="button"
+                    >
+
+                        <span class="profile-avatar">
+                            A
+                        </span>
+
+                        <span id="headerUserName">
+                            Administrador
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 CONTEÚDO
+            ================================================== -->
+
+            <section
+                class="dashboard"
+                id="dashboard"
+            >
+
+
+                <!-- FILTRO -->
+
+                <div class="dashboard-toolbar">
+
+                    <div>
+
+                        <span class="toolbar-label">
+                            PERÍODO
+                        </span>
+
+                        <strong>
+                            Resumo atual
+                        </strong>
+
+                    </div>
+
+
+                    <div class="period-buttons">
+
+                        <button
+                            class="period-button active"
+                            type="button"
+                        >
+                            Hoje
+                        </button>
+
+                        <button
+                            class="period-button"
+                            type="button"
+                        >
+                            Semana
+                        </button>
+
+                        <button
+                            class="period-button"
+                            type="button"
+                        >
+                            Mês
+                        </button>
+
+                        <button
+                            class="period-button"
+                            type="button"
+                        >
+                            Ano
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CARDS PRINCIPAIS
+                ================================================== -->
+
+                <div class="metrics-grid">
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span class="metric-label">
+                                RECEITA BRUTA
+                            </span>
+
+                            <span class="metric-icon orange">
+                                R$
+                            </span>
+
+                        </div>
+
+                        <strong
+                            class="metric-value"
+                            id="receitaBruta"
+                        >
+                            R$ 0,00
+                        </strong>
+
+                        <span class="metric-description">
+                            Total de ganhos registrados
+                        </span>
+
+                    </article>
+
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span class="metric-label">
+                                DESPESAS
+                            </span>
+
+                            <span class="metric-icon gray">
+                                −
+                            </span>
+
+                        </div>
+
+                        <strong
+                            class="metric-value"
+                            id="despesas"
+                        >
+                            R$ 0,00
+                        </strong>
+
+                        <span class="metric-description">
+                            Gastos operacionais
+                        </span>
+
+                    </article>
+
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span class="metric-label">
+                                RESULTADO LÍQUIDO
+                            </span>
+
+                            <span class="metric-icon green">
+                                ↑
+                            </span>
+
+                        </div>
+
+                        <strong
+                            class="metric-value positive"
+                            id="resultadoLiquido"
+                        >
+                            R$ 0,00
+                        </strong>
+
+                        <span class="metric-description">
+                            Receita menos despesas
+                        </span>
+
+                    </article>
+
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span class="metric-label">
+                                INVESTIMENTOS
+                            </span>
+
+                            <span class="metric-icon dark">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <strong
+                            class="metric-value"
+                            id="investimentos"
+                        >
+                            R$ 0,00
+                        </strong>
+
+                        <span class="metric-description">
+                            Investimentos registrados
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SEGUNDA LINHA
+                ================================================== -->
+
+                <div class="overview-grid">
+
+
+                    <!-- FINANCEIRO -->
+
+                    <article class="panel large-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-kicker">
+                                    FINANCEIRO
+                                </span>
+
+                                <h2>
+                                    Desempenho financeiro
+                                </h2>
+
+                            </div>
+
+                            <button
+                                class="panel-action"
+                                type="button"
+                            >
+                                Ver detalhes →
+                            </button>
+
+                        </div>
+
+
+                        <div class="financial-summary">
+
+
+                            <div class="summary-item">
+
+                                <span>
+                                    Receita
+                                </span>
+
+                                <strong id="summaryRevenue">
+                                    R$ 0,00
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-item">
+
+                                <span>
+                                    Gastos
+                                </span>
+
+                                <strong id="summaryExpenses">
+                                    R$ 0,00
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-item">
+
+                                <span>
+                                    Saldo
+                                </span>
+
+                                <strong
+                                    class="positive"
+                                    id="summaryBalance"
+                                >
+                                    R$ 0,00
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+<div class="financial-chart-wrapper">
+
+    <div class="chart-placeholder" id="financialChart">
+
+        <div class="chart-grid"></div>
+
+        <div class="chart-bars">
+
+            <div class="chart-bar-group">
+                <span class="chart-bar receita"></span>
+                <small>Receita</small>
+            </div>
+
+            <div class="chart-bar-group">
+                <span class="chart-bar despesa"></span>
+                <small>Despesas</small>
+            </div>
+
+            <div class="chart-bar-group">
+                <span class="chart-bar investimento"></span>
+                <small>Invest.</small>
+            </div>
+
+            <div class="chart-bar-group">
+                <span class="chart-bar saldo"></span>
+                <small>Saldo</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+                        
+
+    <div class="chart-grid"></div>
+
+    <div class="chart-bars">
+
+        <div class="chart-bar-group">
+            <span class="chart-bar receita"></span>
+            <small>Receita</small>
+        </div>
+
+        <div class="chart-bar-group">
+            <span class="chart-bar despesa"></span>
+            <small>Despesas</small>
+        </div>
+
+        <div class="chart-bar-group">
+            <span class="chart-bar investimento"></span>
+            <small>Invest.</small>
+        </div>
+
+        <div class="chart-bar-group">
+            <span class="chart-bar saldo"></span>
+            <small>Saldo</small>
+        </div>
+
+    </div>
+
+</div>
+
+                            <div class="chart-grid"></div>
+
+                            <div class="chart-line">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                            <div class="chart-labels">
+
+                                <span>
+                                    Seg
+                                </span>
+
+                                <span>
+                                    Ter
+                                </span>
+
+                                <span>
+                                    Qua
+                                </span>
+
+                                <span>
+                                    Qui
+                                </span>
+
+                                <span>
+                                    Sex
+                                </span>
+
+                                <span>
+                                    Sáb
+                                </span>
+
+                                <span>
+                                    Dom
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- OPERAÇÃO -->
+
+                    <article class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-kicker">
+                                    OPERAÇÃO
+                                </span>
+
+                                <h2>
+                                    Visão operacional
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="operation-list">
+
+
+                            <div class="operation-item">
+
+                                <div class="operation-icon">
+                                    🚗
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Veículos
+                                    </strong>
+
+                                    <span>
+                                        Em atendimento
+                                    </span>
+
+                                </div>
+
+                                <b id="vehiclesCount">
+                                    0
+                                </b>
+
+                            </div>
+
+
+                            <div class="operation-item">
+
+                                <div class="operation-icon">
+                                    ◉
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Funcionários
+                                    </strong>
+
+                                    <span>
+                                        Ativos
+                                    </span>
+
+                                </div>
+
+                                <b id="employeesCount">
+                                    0
+                                </b>
+
+                            </div>
+
+
+                            <div class="operation-item">
+
+                                <div class="operation-icon">
+                                    ▣
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Estoque
+                                    </strong>
+
+                                    <span>
+                                        Produtos cadastrados
+                                    </span>
+
+                                </div>
+
+                                <b id="productsCount">
+                                    0
+                                </b>
+
+                            </div>
+
+
+                            <div class="operation-item">
+
+                                <div class="operation-icon">
+                                    ⚙
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Máquinas
+                                    </strong>
+
+                                    <span>
+                                        Equipamentos
+                                    </span>
+
+                                </div>
+
+                                <b id="machinesCount">
+                                    0
+                                </b>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ALERTAS
+                ================================================== -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            CONTROLE
+                        </span>
+
+                        <h2>
+                            Atenção necessária
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="alerts-grid">
+
+
+                    <article class="alert-card critical">
+
+                        <div class="alert-status"></div>
+
+                        <div class="alert-content">
+
+                            <strong>
+                                Estoque crítico
+                            </strong>
+
+                            <span>
+                                Produtos abaixo do estoque mínimo.
+                            </span>
+
+                        </div>
+
+                        <b id="criticalStock">
+                            0
+                        </b>
+
+                    </article>
+
+
+
+                    <article class="alert-card warning">
+
+                        <div class="alert-status"></div>
+
+                        <div class="alert-content">
+
+                            <strong>
+                                Estoque razoável
+                            </strong>
+
+                            <span>
+                                Produtos próximos do limite mínimo.
+                            </span>
+
+                        </div>
+
+                        <b id="warningStock">
+                            0
+                        </b>
+
+                    </article>
+
+
+
+                    <article class="alert-card success">
+
+                        <div class="alert-status"></div>
+
+                        <div class="alert-content">
+
+                            <strong>
+                                Situação normal
+                            </strong>
+
+                            <span>
+                                Itens operacionais dentro do esperado.
+                            </span>
+
+                        </div>
+
+                        <b id="healthyStock">
+                            0
+                        </b>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ACESSO RÁPIDO
+                ================================================== -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            ATALHOS
+                        </span>
+
+                        <h2>
+                            Acesso rápido
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+
+                    <button
+                        class="quick-card"
+                        type="button"
+                    >
+
+                        <span>
+                            🚗
+                        </span>
+
+                        <strong>
+                            Novo veículo
+                        </strong>
+
+                        <small>
+                            Cadastrar atendimento
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="quick-card"
+                        type="button"
+                    >
+
+                        <span>
+                            +
+                        </span>
+
+                        <strong>
+                            Registrar ganho
+                        </strong>
+
+                        <small>
+                            Adicionar receita
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="quick-card"
+                        type="button"
+                    >
+
+                        <span>
+                            −
+                        </span>
+
+                        <strong>
+                            Registrar gasto
+                        </strong>
+
+                        <small>
+                            Adicionar despesa
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="quick-card"
+                        type="button"
+                    >
+
+                        <span>
+                            ▣
+                        </span>
+
+                        <strong>
+                            Adicionar produto
+                        </strong>
+
+                        <small>
+                            Atualizar estoque
+                        </small>
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="footer">
+
+                <span>
+                    Auto Executive
+                </span>
+
+                <span>
+                    Sistema de Gestão • Versão 1.0
+                </span>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         SUPABASE
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+
+    <!-- CONFIG -->
+
+    <script src="./js/config.js"></script>
+
+
+    <!-- DASHBOARD -->
+
+    <script src="./js/dashboard.js"></script>
+
+
+    <script src="./js/financeiro-dashboard.js"></script>
+
+
+</body>
+
+</html>
